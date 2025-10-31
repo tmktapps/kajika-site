@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tmktapps.github.io/kajika-site/sitemap.xml
