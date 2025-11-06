@@ -3,12 +3,12 @@
   const page = document.body.dataset.page;
   if (!page) return;
   document.querySelectorAll('.nav a').forEach(a => {
-    const target = a.getAttribute('href');
-    if ((page === 'home' && target === '/')
-      || target.startsWith(`/${page}/`)) a.classList.add('active');
-  });
+  const href = a.getAttribute('href');
+  const isHome = page === 'home' && (href === './' || href === 'index.html');
+  const isPage = href && href.startsWith(page + '/');
+  if (isHome || isPage) a.classList.add('active');
+});
 })();
-// 年表示（©）
-(() => {
-  const el = document.getElementById('year'); if (el) el.textContent = new Date().getFullYear();
-})();
+// 年号
+(() => { const el = document.getElementById('year'); if (el) el.textContent = new Date().getFullYear(); })();
+
