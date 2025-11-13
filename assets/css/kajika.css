@@ -19,7 +19,7 @@ a{color:var(--mint);text-decoration:none} a:hover{text-decoration:underline}
 
 
 /* バブル背景 */
-.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(1000px 520px at 10% 0%, rgba(98,210,177,.18), transparent),radial-gradient(800px 460px at 90% 12%, rgba(242,200,75,.18), transparent)}
+.hero-bg{position:absolute;pointer-events:none;inset:0;z-index:0;background:radial-gradient(1000px 520px at 10% 0%, rgba(98,210,177,.18), transparent),radial-gradient(800px 460px at 90% 12%, rgba(242,200,75,.18), transparent)}
 .blob{position:absolute;width:200px;height:200px;border-radius:50%;filter:blur(22px);opacity:.55;animation:float 10s ease-in-out infinite alternate}
 .blob.b1{background:var(--mint);top:10%;left:15%}
 .blob.b2{background:var(--gold);top:0%;right:10%;animation-delay:1.2s}
@@ -66,4 +66,5 @@ a{color:var(--mint);text-decoration:none} a:hover{text-decoration:underline}
 
 /* 小さめ画面の微調整 */
 @media (max-width:520px){ .hero h1{font-size:24px} }
+
 
